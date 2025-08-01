@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>addEventListener em JavaScript</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Usando <code>addEventListener</code> com Vários Botões</h1>
+
+    <p>
+      O <strong>addEventListener</strong> é uma forma moderna de adicionar ações a elementos HTML. Com ele, podemos fazer algo acontecer quando o usuário interage com a página, como clicar em um botão, passar o mouse ou digitar no teclado.
+    </p>
+
+    <p>
+      Abaixo estão alguns exemplos de como diferentes botões podem executar ações específicas ao serem clicados:
+    </p>
+
+    <h2>Texto interativo:</h2>
+    <p id="meuTexto">Esse texto será alterado pelos botões abaixo.</p>
+
+    <div class="botoes">
+      <button id="mudarCor">Mudar cor</button>
+      <button id="mudarTexto">Mudar texto</button>
+      <button id="esconderTexto">Esconder texto</button>
+      <button id="mostrarTexto">Mostrar texto</button>
+    </div>
+
+    <h2>Trecho de código JavaScript:</h2>
+    <pre><code>
+document.getElementById("mudarCor").addEventListener("click", function() {
+  document.getElementById("meuTexto").style.color = "rgb(255,255,255)";
+});
+
+document.getElementById("mudarTexto").addEventListener("click", function() {
+  document.getElementById("meuTexto").textContent = "O texto foi alterado com sucesso!";
+});
+
+document.getElementById("esconderTexto").addEventListener("click", function() {
+  document.getElementById("meuTexto").style.display = "none";
+});
+
+document.getElementById("mostrarTexto").addEventListener("click", function() {
+  document.getElementById("meuTexto").style.display = "block";
+});
+    </code></pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
